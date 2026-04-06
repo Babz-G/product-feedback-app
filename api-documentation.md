@@ -45,14 +45,19 @@ Base URL: `https://REPLACE-THIS-WITH-YOUR-DEPLOYED-URL.onrender.com`
 
 ### 🔹 GET `/get-suggestions-by-category/:category`
 
-**Description:** Write your description here
+**Description:** Gets all suggestions by category
 
 **Example Response:**
 
 ```
-Write the data returned by this endpoint.
-Think about its data type (String, Object, Array of Objects, etc.)
-Use spaces/indents to format the data if it is an array or object.
+[
+  {
+    "id": 3,
+    "title": "Add color themes",
+    "category": "UI",
+    "detail": "Allow users to personalize their account with different color themes."
+  }
+]
 ```
 
 ---
