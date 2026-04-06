@@ -64,22 +64,22 @@ Base URL: `https://REPLACE-THIS-WITH-YOUR-DEPLOYED-URL.onrender.com`
 
 ### 🔹 POST `/add-one-suggestion`
 
-**Description:** Write your description here
+**Description:** Adds new suggestions to database
 
 **Example Request Body:**
 
 ```
-Write the data required in the request body.
-Think about its data type (String, Object, Array of Objects, etc.)
-Use spaces/indents to format the data if it is an array or object.
+{
+  "title": "Add dark mode",
+  "category": "UI",
+  "detail": "Allow users to switch between light and dark mode."
+}
 ```
 
 **Example Response:**
 
 ```
-Write the data returned by this endpoint.
-Think about its data type (String, Object, Array of Objects, etc.)
-Use spaces/indents to format the data if it is an array or object.
+Success! Suggestion has been added.
 ```
 
 ---
