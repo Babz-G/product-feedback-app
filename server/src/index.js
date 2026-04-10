@@ -23,5 +23,35 @@ app.listen(port, () => {
 });
 
 // ✨✨✨ Helper Functions ✨✨✨
-
+async function getAllSuggestions() {
+  const result = await db.query("SELECT * FROM suggestions");
+  return result.rows;
+}
+async function getSuggestionsByCategory(category) {
+  const result = await db.query(
+    "SELECT * FROM suggestions WHERE category = $1",
+    [category]
+  );
+  return result.rows;
+}
+async function addOneSuggestion(title, category, detail) {
+  await db.query(
+    "INSERT INTO suggestions (title, category, detail) VALUES ($1, $2, $3)",
+    [title, category, detail]
+  );
+}
 // ✨✨✨ API Endpoints ✨✨✨
+app.get("/get-all-suggestions", async (req, res) => {
+  const suggestions = await getAllSuggestions();
+  res.json(suggestions);
+});
+app.get("/get-suggestions-by-category/:category", async (req, res) => {
+  const category = req.params.category;
+  const suggestions = await getSuggestionsByCategory(category);
+  res.json(suggestions);
+});
+app.post("/add-one-suggestion", async (req, res) => {
+  const { title, category, detail } = req.body;
+  await addOneSuggestion(title, category, detail);
+  res.json("Success! Suggestion has been added.");
+});
