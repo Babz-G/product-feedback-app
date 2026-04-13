@@ -10,15 +10,37 @@ function Home() {
   }, []);
 
   return (
-    <div>
-      <h1>Derp</h1>
-      {suggestions.map((suggestion) => (
-        <div key={suggestion.id}>
-          <h2>{suggestion.title}</h2>
-          <p>{suggestion.detail}</p>
-          <p>{suggestion.category}</p>
+    <div className="home-container">
+      <aside className="left-column">
+        <div className="company-card">
+          <h2>My Company</h2>
+          <p>Feedback Board</p>
         </div>
-      ))}
+        <div className="category-filter">
+          <button>All</button>
+          <button>UI</button>
+          <button>UX</button>
+          <button>Enhancement</button>
+          <button>Bug</button>
+          <button>Feature</button>
+        </div>
+      </aside>
+
+      <main className="right-column">
+        <div className="suggestions-header">
+          <p>{suggestions.length} Suggestions</p>
+          <button className="feedback-btn">+ Add Feedback</button>
+        </div>
+        <div className="suggestions-list">
+          {suggestions.map((suggestion) => (
+            <div key={suggestion.id} className="suggestion-card">
+              <h3>{suggestion.title}</h3>
+              <p>{suggestion.detail}</p>
+              <span className="category-name">{suggestion.category}</span>
+            </div>
+          ))}
+        </div>
+      </main>
     </div>
   );
 }
