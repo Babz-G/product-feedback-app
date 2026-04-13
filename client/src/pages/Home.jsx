@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./Home.css";
 
 function Home() {
   const [suggestions, setSuggestions] = useState([]);
