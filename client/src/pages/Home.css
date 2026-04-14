@@ -16,7 +16,7 @@
 
 .company-card {
   background: linear-gradient(
-    135deg,
+    to right,
     var(--blue),
     var(--purple),
     var(--salmon)
@@ -122,4 +122,31 @@
   font-size: 13px;
   font-weight: 600;
   width: fit-content;
+}
+.no-feedback {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.no-feedback img {
+  width: 130px;
+  margin-bottom: 16px;
+}
+
+.no-feedback h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.no-feedback p {
+  font-size: 15px;
+  color: var(--muted-blue);
+  max-width: 400px;
 }

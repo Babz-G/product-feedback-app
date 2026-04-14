@@ -1,8 +1,14 @@
 import { useState, useEffect } from "react";
 import "./Home.css";
+import emptyIllustration from "../assets/suggestions/illustration-empty.svg";
 
 function Home() {
   const [suggestions, setSuggestions] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const filteredSuggestions =
+    selectedCategory === "All"
+      ? suggestions
+      : suggestions.filter((s) => s.category === selectedCategory);
 
   useEffect(() => {
     fetch("/api/get-all-suggestions")
@@ -18,28 +24,43 @@ function Home() {
           <p>Feedback Board</p>
         </div>
         <div className="category-filter">
-          <button>All</button>
-          <button>UI</button>
-          <button>UX</button>
-          <button>Enhancement</button>
-          <button>Bug</button>
-          <button>Feature</button>
+          <button onClick={() => setSelectedCategory("All")}>All</button>
+          <button onClick={() => setSelectedCategory("UI")}>UI</button>
+          <button onClick={() => setSelectedCategory("UX")}>UX</button>
+          <button onClick={() => setSelectedCategory("Enhancement")}>
+            Enhancement
+          </button>
+          <button onClick={() => setSelectedCategory("Bug")}>Bug</button>
+          <button onClick={() => setSelectedCategory("Feature")}>
+            Feature
+          </button>
         </div>
       </aside>
 
       <main className="right-column">
         <div className="suggestions-header">
-          <p>{suggestions.length} Suggestions</p>
+          <p>{filteredSuggestions.length} Suggestions</p>
           <button className="feedback-btn">+ Add Feedback</button>
         </div>
         <div className="suggestions-list">
-          {suggestions.map((suggestion) => (
-            <div key={suggestion.id} className="suggestion-card">
-              <h3>{suggestion.title}</h3>
-              <p>{suggestion.detail}</p>
-              <span className="category-name">{suggestion.category}</span>
+          {filteredSuggestions.length === 0 ? (
+            <div className="no-feedback">
+              <img src={emptyIllustration} alt="No feedback" />
+              <h2>There is no feedback yet.</h2>
+              <p>
+                Got a suggestion? Found a bug that needs to be squashed? We love
+                hearing about new ideas to improve our app.
+              </p>
             </div>
-          ))}
+          ) : (
+            filteredSuggestions.map((suggestion) => (
+              <div key={suggestion.id} className="suggestion-card">
+                <h3>{suggestion.title}</h3>
+                <p>{suggestion.detail}</p>
+                <span className="category-name">{suggestion.category}</span>
+              </div>
+            ))
+          )}
         </div>
       </main>
     </div>
