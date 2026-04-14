@@ -150,3 +150,7 @@
   color: var(--muted-blue);
   max-width: 400px;
 }
+.category-filter button.active {
+  background: var(--dark-blue);
+  color: var(--white);
+}

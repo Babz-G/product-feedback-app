@@ -24,14 +24,40 @@ function Home() {
           <p>Feedback Board</p>
         </div>
         <div className="category-filter">
-          <button onClick={() => setSelectedCategory("All")}>All</button>
-          <button onClick={() => setSelectedCategory("UI")}>UI</button>
-          <button onClick={() => setSelectedCategory("UX")}>UX</button>
-          <button onClick={() => setSelectedCategory("Enhancement")}>
+          <button
+            className={selectedCategory === "All" ? "active" : ""}
+            onClick={() => setSelectedCategory("All")}
+          >
+            All
+          </button>
+          <button
+            className={selectedCategory === "UI" ? "active" : ""}
+            onClick={() => setSelectedCategory("UI")}
+          >
+            UI
+          </button>
+          <button
+            className={selectedCategory === "UX" ? "active" : ""}
+            onClick={() => setSelectedCategory("UX")}
+          >
+            UX
+          </button>
+          <button
+            className={selectedCategory === "Enhancement" ? "active" : ""}
+            onClick={() => setSelectedCategory("Enhancement")}
+          >
             Enhancement
           </button>
-          <button onClick={() => setSelectedCategory("Bug")}>Bug</button>
-          <button onClick={() => setSelectedCategory("Feature")}>
+          <button
+            className={selectedCategory === "Bug" ? "active" : ""}
+            onClick={() => setSelectedCategory("Bug")}
+          >
+            Bug
+          </button>
+          <button
+            className={selectedCategory === "Feature" ? "active" : ""}
+            onClick={() => setSelectedCategory("Feature")}
+          >
             Feature
           </button>
         </div>
