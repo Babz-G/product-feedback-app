@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Home.css";
-import emptyIllustration from "../assets/suggestions/illustration-empty.svg";
+import iconPlus from "../assets/icons/icon-plus.svg";
+import illustrationEmpty from "../assets/suggestions/illustration-empty.svg";
 
 function Home() {
   const [suggestions, setSuggestions] = useState([]);
@@ -66,17 +68,24 @@ function Home() {
       <main className="right-column">
         <div className="suggestions-header">
           <p>{filteredSuggestions.length} Suggestions</p>
-          <button className="feedback-btn">+ Add Feedback</button>
+          <Link to="/add-feedback">
+            <button className="feedback-btn">
+              <img src={iconPlus} alt="plus icon" /> Add Feedback
+            </button>
+          </Link>
         </div>
         <div className="suggestions-list">
           {filteredSuggestions.length === 0 ? (
             <div className="no-feedback">
-              <img src={emptyIllustration} alt="No feedback" />
+              <img src={illustrationEmpty} alt="No feedback" />
               <h2>There is no feedback yet.</h2>
               <p>
                 Got a suggestion? Found a bug that needs to be squashed? We love
                 hearing about new ideas to improve our app.
               </p>
+              <Link to="/add-feedback">
+                <button className="feedback-btn">+ Add Feedback</button>
+              </Link>
             </div>
           ) : (
             filteredSuggestions.map((suggestion) => (
