@@ -9,13 +9,19 @@ function AddFeedback() {
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("UI");
   const [detail, setDetail] = useState("");
-  const [error, setError] = useState("");
+  const [errors, setErrors] = useState({
+    title: "",
+    detail: "",
+  });
 
   async function handleSubmit(e) {
     e.preventDefault();
 
     if (!title || !detail) {
-      setError("Please fill in all fields");
+      setErrors({
+        title: title ? "" : "Can't be empty",
+        detail: detail ? "" : "Can't be empty",
+      });
       return;
     }
 
@@ -35,7 +41,7 @@ function AddFeedback() {
       alert("Thank you for your feedback! 🥳");
       navigate("/");
     } catch (err) {
-      setError("Something went wrong");
+      setErrors({ title: "Something went wrong", detail: "" });
       console.error(err);
     }
   }
@@ -50,8 +56,6 @@ function AddFeedback() {
         <img src={iconNewFeedback} alt="new feedback" className="icon-circle" />
         <h1>Create New Feedback</h1>
 
-        {error && <p className="error">{error}</p>}
-
         <form onSubmit={handleSubmit}>
           <label>Feedback Title</label>
           <p>Add a short, descriptive headline</p>
@@ -59,7 +63,10 @@ function AddFeedback() {
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            className={errors.title ? "red-error" : ""}
           />
+          {errors.title && <p className="error">{errors.title}</p>}
+
           <label>Category</label>
           <p>Choose a category for your feedback</p>
           <select
@@ -72,6 +79,7 @@ function AddFeedback() {
             <option value="Bug">Bug</option>
             <option value="Feature">Feature</option>
           </select>
+
           <label>Feedback Detail</label>
           <p>
             Include any specific comments on what should be improved, added,
@@ -80,12 +88,19 @@ function AddFeedback() {
           <textarea
             value={detail}
             onChange={(e) => setDetail(e.target.value)}
+            className={errors.detail ? "red-error" : ""}
           />
+          {errors.detail && <p className="error">{errors.detail}</p>}
+
           <div className="button-row">
             <Link to="/">
-              <button type="button">Cancel</button>
+              <button type="button" className="cancel-btn">
+                Cancel
+              </button>
             </Link>
-            <button type="submit">Add Feedback</button>
+            <button type="submit" className="submit-btn">
+              Add Feedback
+            </button>
           </div>
         </form>
       </div>

@@ -1,8 +1,12 @@
+/* ✨✨✨ LAYOUT ✨✨✨ */
+
 .add-feedback-page {
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
 }
+
+/* ✨✨✨ GO BACK LINK ✨✨✨ */
 
 .go-back-link {
   display: flex;
@@ -13,6 +17,8 @@
   font-weight: 600;
   margin-bottom: 40px;
 }
+
+/* ✨✨✨ FORM CARD ✨✨✨ */
 
 .add-feedback-card {
   background: var(--white);
@@ -37,6 +43,8 @@
   margin-bottom: 10px;
 }
 
+/* ✨✨✨ FORM INPUTS ✨✨✨ */
+
 .add-feedback-card input,
 .add-feedback-card select,
 .add-feedback-card textarea {
@@ -54,10 +62,23 @@
   resize: none;
 }
 
-.error {
+/* .error {
   color: red;
+  font-size: 13px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+} */
+.add-feedback-card p.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
   margin-bottom: 10px;
 }
+.red-error {
+  border: 1px solid red !important;
+}
+
+/* ✨✨✨ BUTTONS ✨✨✨ */
 
 .button-row {
   display: flex;
@@ -66,7 +87,22 @@
   margin-top: 30px;
 }
 
-.button-row button {
+/* .button-row button {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+} */
+
+/* .button-row button:first-child {
+  background: var(--dark-blue);
+  color: var(--white);
+} */
+
+.cancel-btn {
+  background: var(--dark-navy);
+  color: var(--white);
   padding: 12px 20px;
   border-radius: 10px;
   border: none;
@@ -74,15 +110,32 @@
   cursor: pointer;
 }
 
-.button-row button:first-child {
-  background: var(--dark-blue);
-  color: var(--white);
+.cancel-btn:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
 }
 
-.button-row button:last-child {
+.submit-btn {
   background: var(--purple);
   color: var(--white);
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
 }
+
+.submit-btn:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+.submit-btn:focus {
+  outline: none;
+}
+
+/* ✨✨✨ CIRCLE ICON ✨✨✨ */
 
 .icon-circle {
   width: 50px;
@@ -98,6 +151,9 @@
   top: -60px;
   margin-bottom: -30px;
 }
+
+/* ✨✨✨ SUGGESTIONS HEADER ✨✨✨ */
+
 .suggestions-header p {
   display: flex;
   align-items: center;

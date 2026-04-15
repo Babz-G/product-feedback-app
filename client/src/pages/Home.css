@@ -1,3 +1,5 @@
+/* ✨✨✨ LAYOUT ✨✨✨ */
+
 .home-container {
   display: flex;
   gap: 24px;
@@ -13,6 +15,15 @@
   width: 255px;
   flex-shrink: 0;
 }
+
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ✨✨✨ COMPANY CARD ✨✨✨ */
 
 .company-card {
   background: linear-gradient(
@@ -35,6 +46,8 @@
   font-size: 15px;
   opacity: 0.75;
 }
+
+/* ✨✨✨ CATEGORY FILTER ✨✨✨ */
 
 .category-filter {
   background: var(--white);
@@ -61,12 +74,12 @@
   background: var(--light-lavender);
 }
 
-.right-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.category-filter button.active {
+  background: var(--dark-blue);
+  color: var(--white);
 }
+
+/* ✨✨✨ SUGGESTIONS HEADER ✨✨✨ */
 
 .suggestions-header {
   background: var(--dark-navy);
@@ -77,6 +90,14 @@
   justify-content: space-between;
   color: var(--white);
 }
+
+.suggestions-header p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ✨✨✨ BUTTONS ✨✨✨ */
 
 .feedback-btn {
   background: var(--purple);
@@ -92,9 +113,12 @@
 
 .feedback-btn:hover {
   opacity: 0.8;
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
 }
 
-.suggestion-card {
+/* ✨✨✨ SUGGESTION CARDS ✨✨✨ */
+a .suggestion-card {
   background: var(--white);
   border-radius: 10px;
   padding: 28px 32px;
@@ -123,6 +147,9 @@
   font-weight: 600;
   width: fit-content;
 }
+
+/* ✨✨✨ NO FEEDBACK ✨✨✨ */
+
 .no-feedback {
   background: var(--white);
   border-radius: 10px;
@@ -149,8 +176,4 @@
   font-size: 15px;
   color: var(--muted-blue);
   max-width: 400px;
-}
-.category-filter button.active {
-  background: var(--dark-blue);
-  color: var(--white);
 }
