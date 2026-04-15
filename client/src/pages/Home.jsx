@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 import iconPlus from "../assets/icons/icon-plus.svg";
 import illustrationEmpty from "../assets/suggestions/illustration-empty.svg";
+import iconSuggestions from "../assets/suggestions/icon-suggestions.svg";
 
 function Home() {
   const [suggestions, setSuggestions] = useState([]);
@@ -67,7 +68,10 @@ function Home() {
 
       <main className="right-column">
         <div className="suggestions-header">
-          <p>{filteredSuggestions.length} Suggestions</p>
+          <p>
+            <img src={iconSuggestions} alt="suggestions icon" />{" "}
+            {filteredSuggestions.length} Suggestions
+          </p>
           <Link to="/add-feedback">
             <button className="feedback-btn">
               <img src={iconPlus} alt="plus icon" /> Add Feedback

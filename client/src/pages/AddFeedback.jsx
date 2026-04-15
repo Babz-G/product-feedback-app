@@ -32,6 +32,7 @@ function AddFeedback() {
         throw new Error("Failed to add suggestion");
       }
 
+      alert("Thank you for your feedback! 🥳");
       navigate("/");
     } catch (err) {
       setError("Something went wrong");

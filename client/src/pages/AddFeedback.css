@@ -98,3 +98,8 @@
   top: -60px;
   margin-bottom: -30px;
 }
+.suggestions-header p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
