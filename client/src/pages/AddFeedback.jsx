@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // useNavigate to redirect form back to homepage after submission
 import iconArrowLeft from "../assets/icons/icon-arrow-left.svg";
 import iconNewFeedback from "../assets/icons/icon-new-feedback.svg";
 import "./AddFeedback.css";
 
 function AddFeedback() {
+  const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("UI");
   const [detail, setDetail] = useState("");
@@ -30,6 +31,8 @@ function AddFeedback() {
       if (!res.ok) {
         throw new Error("Failed to add suggestion");
       }
+
+      navigate("/");
     } catch (err) {
       setError("Something went wrong");
       console.error(err);
@@ -56,7 +59,6 @@ function AddFeedback() {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
-
           <label>Category</label>
           <p>Choose a category for your feedback</p>
           <select
@@ -69,7 +71,6 @@ function AddFeedback() {
             <option value="Bug">Bug</option>
             <option value="Feature">Feature</option>
           </select>
-
           <label>Feedback Detail</label>
           <p>
             Include any specific comments on what should be improved, added,
@@ -79,7 +80,6 @@ function AddFeedback() {
             value={detail}
             onChange={(e) => setDetail(e.target.value)}
           />
-
           <div className="button-row">
             <Link to="/">
               <button type="button">Cancel</button>
