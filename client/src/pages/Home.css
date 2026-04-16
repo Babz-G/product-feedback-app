@@ -196,3 +196,36 @@
     justify-content: center;
   }
 }
+/* ✨✨✨ SORT ✨✨✨ */
+
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--white);
+  width: fit-content;
+}
+
+.sort select {
+  background: transparent;
+  color: var(--white);
+  border: none;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  appearance: none;
+  padding-right: 16px;
+}
+
+.sort select option {
+  color: var(--dark-blue);
+  background: var(--white);
+}
+.arrow-down {
+  width: 10px;
+  pointer-events: none;
+  filter: brightness(0) invert(1);
+  margin-left: -20px;
+}

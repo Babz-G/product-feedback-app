@@ -4,14 +4,28 @@ import "./Home.css";
 import iconPlus from "../assets/icons/icon-plus.svg";
 import illustrationEmpty from "../assets/suggestions/illustration-empty.svg";
 import iconSuggestions from "../assets/suggestions/icon-suggestions.svg";
+import iconArrowDown from "../assets/icons/icon-arrow-down.svg";
 
 function Home() {
   const [suggestions, setSuggestions] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const filteredSuggestions =
+  const [sortBy, setSortBy] = useState("most-upvotes");
+
+  const filteredSuggestions = (
     selectedCategory === "All"
       ? suggestions
-      : suggestions.filter((s) => s.category === selectedCategory);
+      : suggestions.filter((s) => s.category === selectedCategory)
+  ).sort((a, b) => {
+    if (sortBy === "most-upvotes")
+      return (b.upvote_count || 0) - (a.upvote_count || 0);
+    if (sortBy === "least-upvotes")
+      return (a.upvote_count || 0) - (b.upvote_count || 0);
+    if (sortBy === "most-comments")
+      return (b.comment_count || 0) - (a.comment_count || 0);
+    if (sortBy === "least-comments")
+      return (a.comment_count || 0) - (b.comment_count || 0);
+    return 0;
+  });
 
   useEffect(() => {
     fetch("/api/get-all-suggestions")
@@ -72,12 +86,23 @@ function Home() {
             <img src={iconSuggestions} alt="suggestions icon" />{" "}
             {filteredSuggestions.length} Suggestions
           </p>
+          <div className="sort">
+            <span>Sort by:</span>
+            <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+              <option value="most-upvotes">Most Upvotes</option>
+              <option value="least-upvotes">Least Upvotes</option>
+              <option value="most-comments">Most Comments</option>
+              <option value="least-comments">Least Comments</option>
+            </select>
+            <img src={iconArrowDown} alt="arrow down" className="arrow-down" />
+          </div>
           <Link to="/add-feedback">
             <button className="feedback-btn">
               <img src={iconPlus} alt="plus icon" /> Add Feedback
             </button>
           </Link>
         </div>
+
         <div className="suggestions-list">
           {filteredSuggestions.length === 0 ? (
             <div className="no-feedback">
