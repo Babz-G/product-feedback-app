@@ -12,6 +12,14 @@ A full-stack web application where users can view, filter, and submit suggestion
 
 ## 🖼️ Screenshots
 
+### 🖥️ Desktop
+
+**Home Page**
+
+**Add Feedback Page**
+
+### 📱 Mobile
+
 **Home Page**
 
 **Add Feedback Page**
