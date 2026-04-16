@@ -10,28 +10,6 @@ A full-stack web application where users can view, filter, and submit suggestion
 
 🔗 [View the live app here](https://product-feedback-app-babz-2026.netlify.app/)
 
-## 🖼️ Screenshots
-
-### 🖥️ Desktop
-
-**Home Page**
-
-**Add Feedback Page**
-
-### 📱 Mobile
-
-**Home Page**
-
-**Add Feedback Page**
-
-## ✨ Features
-
-- 📋 Browse all product feedback suggestions
-- 🔍 Filter suggestions by category (UI, UX, Enhancement, Bug, Feature)
-- ➕ Submit new feedback via a form
-- ⚠️ Error messages display if form fields are left empty
-- 📱 Responsive design for mobile and desktop
-
 ## 🛠️ Tech Stack
 
 ### **Frontend**
@@ -79,7 +57,38 @@ A full-stack web application where users can view, filter, and submit suggestion
 [![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com)
 [![VS Code](https://img.shields.io/badge/VS_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)](https://code.visualstudio.com)
-[![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)](https://eslint.org)
+
+## 🖼️ Screenshots
+
+### 🖥️ Desktop
+
+**Home Page**  
+<img width="1050" height="640" alt="Screenshot 2026-04-16 at 2 03 01 PM" src="https://github.com/user-attachments/assets/3eaa6a6d-9a2d-4ea8-b9e9-757fc84441ef" /> 
+
+
+**Add Feedback Page**  
+<img width="1050" height="663" alt="Screenshot 2026-04-16 at 2 03 12 PM" src="https://github.com/user-attachments/assets/ec753644-5b8d-472f-843c-8a1cad68d141" /> 
+
+
+### 📱 Mobile
+
+**Home Page**  
+<img width="503" height="691" alt="Screenshot 2026-04-16 at 2 04 10 PM" src="https://github.com/user-attachments/assets/0cb448a0-8e70-4bb4-92f4-01e24c736180" />
+
+
+**Add Feedback Page**  
+<img width="500" height="691" alt="Screenshot 2026-04-16 at 2 03 50 PM" src="https://github.com/user-attachments/assets/4785f951-e4d7-46f0-aeed-9aa418325630" />
+
+
+## ✨ Features
+
+- 📋 Browse all product feedback suggestions
+- 🔍 Filter suggestions by category (UI, UX, Enhancement, Bug, Feature)
+- ➕ Submit new feedback via a form
+- ⚠️ Error messages display if form fields are left empty
+- 📱 Responsive design for mobile and desktop
+
+
 
 ## 🔹 API Endpoints
 
@@ -102,23 +111,13 @@ CREATE TABLE suggestions (
 );
 ```
 
-## 💭 Reflections
+## 💭 Future Ideas
 
-**What I learned:**
-How to build a full-stack application from scratch, including setting up a REST API with Express, connecting it to a PostgreSQL database hosted on Neon, and building a React frontend that fetches and displays real data.
-
-**What I'm proud of:**
-Successfully connecting all three layers of the stack together and implementing features like category filtering, form error messages, and responsive design.
-
-**What challenged me:**
-Managing the file structure across client and server folders, and understanding how environment variables work when deploying to Render.
-
-**Future ideas:**
-🏆 Add upvoting on suggestions
-🏆 Add a hamburger menu in mobile view
-🏆 Sort suggestions by most/least upvotes and most/least comment
-🏆 Edit an existing suggestion
-🏆 Delete an existing suggestion
-🏆 Add comments to an existing suggestion
-🏆 Implement multi-filtering
-🏆 Add a light/dark mode toggle
+- 🏆 Add upvoting on suggestions
+- 🏆 Add a hamburger menu in mobile view
+- 🏆 Sort suggestions by most/least upvotes and most/least comments
+- 🏆 Edit an existing suggestion
+- 🏆 Delete an existing suggestion
+- 🏆 Add comments to an existing suggestion
+- 🏆 Implement multi-filtering
+- 🏆 Add a light/dark mode toggle
