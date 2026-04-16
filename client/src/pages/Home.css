@@ -118,7 +118,7 @@
 }
 
 /* ✨✨✨ SUGGESTION CARDS ✨✨✨ */
-a .suggestion-card {
+.suggestion-card {
   background: var(--white);
   border-radius: 10px;
   padding: 28px 32px;
@@ -176,4 +176,23 @@ a .suggestion-card {
   font-size: 15px;
   color: var(--muted-blue);
   max-width: 400px;
+}
+/* ✨✨✨ RESPONSIVE ✨✨✨ */
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+  }
+
+  .left-column {
+    width: 100%;
+  }
+
+  .company-card {
+    padding: 24px;
+  }
+
+  .category-filter {
+    justify-content: center;
+  }
 }
