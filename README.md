@@ -1,264 +1,116 @@
-# Product Feedback App
+# 📘 Product Feedback App
 
-## 👋 Welcome!
+Build better products, one suggestion at a time.
 
-Imagine you've been hired as a freelance full-stack developer. You've just been hired by a startup called _My Company_. 
+## 📌 Project Description & Purpose
 
-Your task: build a Product Feedback app where users can view and submit suggestions about the company's new product. 
+A full-stack web application where users can view, filter, and submit suggestions to help improve a product. Users can browse all feedback, filter by category, and add their own suggestions through a form with built-in error messages.
 
-## 🖼️ Live Demo
+## 🚀 Live Site
 
-[View the live project demo here](https://product-feedback-app-demo.netlify.app/) ✨
+🔗 [View the live app here](https://product-feedback-app-babz-2026.netlify.app/)
 
-![image](https://github.com/user-attachments/assets/5fabe48e-fb2b-4337-94cc-515e64a0bf66)
+## 🖼️ Screenshots
 
+**Home Page**
 
-## 🎯 Project Requirements
+**Add Feedback Page**
 
-**Your Goal:** Build a full-stack product feedback app where users can view, filter, and submit suggestions on how the company can improve its product.
+## ✨ Features
 
-You will build the 3 parts of a full-stack application:
-- **Database** — PostgreSQL, deployed to Neon
-- **Server/API** — Node and Express, deployed to Render
-- **Frontend** — React, deployed to Netlify
+- 📋 Browse all product feedback suggestions
+- 🔍 Filter suggestions by category (UI, UX, Enhancement, Bug, Feature)
+- ➕ Submit new feedback via a form
+- ⚠️ Error messages display if form fields are left empty
+- 📱 Responsive design for mobile and desktop
 
-The frontend should be responsive and include 2 pages:
+## 🛠️ Tech Stack
 
-### 🏠 Home Page
-- View all suggestions 
-- Filter suggestions by category
-- Display a "There is no feedback" screen when there are no suggestions to show
+### **Frontend**
 
-### ➕ Add Feedback Page
-- Submit a new suggestion via a form
-- Display form validation errors 
+|            |                       |
+| ---------- | --------------------- |
+| Languages  | HTML, CSS, JavaScript |
+| Framework  | React + React Router  |
+| Deployment | Netlify               |
 
-## The Tech Stack
+[![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)](https://reactrouter.com/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://netlify.com)
 
-These are all the technologies you should use to build your full-stack application: 
+### **Server/API**
 
-| Component | Language | Framework | Deployment | Dev Tools |
-|-----------|------------|----------------|------------|-------|
-| Frontend  | HTML, CSS, JavaScript | React         | Netlify   |      |
-| Server/API | Node.js     | Express       | Render    | Postman for API testing |
-| Database  | PostgreSQL |               | Neon    |   |
+|            |                      |
+| ---------- | -------------------- |
+| Languages  | JavaScript           |
+| Framework  | Express.js (Node.js) |
+| Deployment | Render               |
 
+[![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)](https://expressjs.com/)
+[![NPM](https://img.shields.io/badge/NPM-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://npmjs.com)
+[![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://render.com)
+[![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](https://postman.com)
 
+### **Database**
 
-## 🔗 Resources
+|            |                   |
+| ---------- | ----------------- |
+| Language   | SQL               |
+| Deployment | Neon (PostgreSQL) |
 
-- ** 🎨 [Figma Designs](https://www.figma.com/design/vxjX8SdBOt21DCD14mrBM9/Product-Feedback-App-Design?node-id=0-1&t=OH1BSnaLrvNeWMlQ-1)** 
-- ** 📘 [Documentation Guides](https://docs.google.com/document/d/18jxCUA0bebCyYaIHy8aaKMgOQH4w5-b-iCGDWpV4K4M/edit?tab=t.0#heading=h.ykdbmvmlp0ag)** 
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Neon](https://img.shields.io/badge/Neon-00E599?style=for-the-badge&logo=neon&logoColor=black)](https://neon.tech)
 
----
+### **Tools**
 
-## 🚀 Roadmap: Step-by-step guide to building this project
+[![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com)
+[![VS Code](https://img.shields.io/badge/VS_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)](https://code.visualstudio.com)
+[![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)](https://eslint.org)
 
----
+## 🔹 API Endpoints
 
-### ⚙️ Review Instructions & Links
-1. Read through this README from top to bottom
-2. Review [Figma Designs](https://www.figma.com/design/vxjX8SdBOt21DCD14mrBM9/Product-Feedback-App-Design?node-id=0-1&t=OH1BSnaLrvNeWMlQ-1)
-3. Explore the Demo link
-4. Make sure you understand the flow of building this project: Database → API → Frontend → Deployment.
+| Method | Endpoint                                 | Description                            |
+| ------ | ---------------------------------------- | -------------------------------------- |
+| `GET`  | `/get-all-suggestions`                   | Gets all suggestions from the database |
+| `GET`  | `/get-suggestions-by-category/:category` | Gets suggestions filtered by category  |
+| `POST` | `/add-one-suggestion`                    | Adds a new suggestion to the database  |
 
----
+🔗 Full API documentation: [View here](https://github.com/Babz-G/product-feedback-app/blob/main/api-documentation.md)
 
-### ⚙️ Copy this Github repo template and clone to your local machine
-1. Make a copy of this repo into your Github account via the "Use this template" button on the upper right corner of this page. 
-2. Clone your repo into your `dev` folder. 
+## 🗄️ Database Schema
 
----
+```sql
+CREATE TABLE suggestions (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR NOT NULL,
+  category VARCHAR NOT NULL,
+  detail VARCHAR NOT NULL
+);
+```
 
-### 🎯 Milestone 1: Create SQL Database Schema
+## 💭 Reflections
 
-1. Review the [Figma designs](https://www.figma.com/design/vxjX8SdBOt21DCD14mrBM9/Product-Feedback-App-Design?node-id=0-1&t=OH1BSnaLrvNeWMlQ-1) and plan what data your app needs
-2. Create a new DB Fiddle via [db-fiddle.com](https://www.db-fiddle.com).
-    - By default, DB Fiddle uses MySQL, but in this class we are using PostgreSQL.
-    - To switch, click the menu in the upper-left corner and select the latest version of PostgreSQL (18)
+**What I learned:**
+How to build a full-stack application from scratch, including setting up a REST API with Express, connecting it to a PostgreSQL database hosted on Neon, and building a React frontend that fetches and displays real data.
 
-      ❌ Incorrect setup (MySQL selected):
-      
-        <img width="405" alt="Incorrect DB Fiddle setup (MySQL selected)" src="https://github.com/user-attachments/assets/9218e723-246f-402e-a475-38b4c77bfb95" />
-
-    
-      ✅ Correct setup (PostgreSQL selected):
-      
-        <img width="438" alt="Correct DB Fiddle setup (PostgreSQL selected)" src="https://github.com/user-attachments/assets/2b6a07ef-2d8c-4afd-8bca-7867d645673c" />
-
-3. Write PostgreSQL code to create your `suggestions` table
-4. Insert at least 3 rows of sample data into the table
-5. Write the SQL queries for your API to:
-     - Get all suggestions
-     - Get suggestions by category
-     - Add a suggestion
-6. Bookmark the link to your DB Fiddle so you can find it later.
-7. Submit the link to your DB Fiddle on Canvas.
-
-✅ By the end of this milestone:
-- Your `suggestions` table is created in DB Fiddle
-- Your table contains at least 3 rows of sample data
-- Your SQL queries for getting all suggestions, getting suggestions by category and adding a suggestion work
-   
----
-
-### 🎯 Milestone 2: Deploy SQL Database to Neon
-
-1. Use Neon.tech to create a new Neon project called `suggestions`. Use this [Neon deployment guide](https://github.com/ac-backend/countries-app-instructions/blob/main/version-3/deploy-database-to-neon.md) to help you. 
-2. Set up your database on Neon (create your table(s) and insert rows of sample data)
-3. Submit a screenshot of your deployed database to Canvas.
-
-✅ By the end of this milestone:
-- Your `suggestions` table exists in Neon and contains at least 3 rows of data
-
----
-
-### 🎯 Milestone 3: Write API Documentation
-
-1. In the root folder of your `product-feedback-app` Github repo, you'll find an `api-documentation.md` file.
-2. Your task is to fill in the blanks in this API documentation file using Markdown code. This is an important step in planning how your frontend and backend will communicate. Think of this document as a blueprint for the API endpoints your app will need.
-3. For each API endpoint, you will need to write:
-    - A description,
-    - An example request URL
-    - An example request body (if applicable)
-    - An example response. 
-4. Refer to the [Countries API Documentation](https://github.com/ac-backend/countries-app-instructions/blob/main/version-3/api-documentation.md) as an example of what a finished doc should look like.
-5. Submit the Github link to your api-documentation.md file on Canvas.
-
-✅ By the end of this milestone:
-- Each API endpoint is documented with:
-  -  a clear URL
-  -  a method (GET or POST)
-  - Request body (if needed)
-  - Example response
-- The Markdown is properly formatted and there are no errors
-
----
-
-### ⚙️ Set up your project's folder structure
-
-1. Open your `product-feedback-app` folder in VS Code. 
-2. Inside `product-feedback-app`, create two folders:
-   - `client` — for your frontend code
-   - `server` — for your backend (API) code
-  
-✅ Check your setup:
-- You have both `client` and `server` folders inside `product-feedback-app`
-
----
-
-### 🎯 Milestone 4: Set Up the Backend Server/API
-
-Now that your database is ready, you'll build a server to interact with it! 
-
-Refer to this [Setting Up Your Backend guide](https://github.com/ac-backend/product-feedback-app/blob/main/set-up-backend.md) to set up your backend server/api from scratch in the `server` folder. 
-
-✅ By the end of this milestone:
-- Your server runs without errors (with `node --watch index.js`)
-
----
-
-### 🎯 Milestone 5: Build the Backend Server/API
-
-1. Build your API endpoints and helper functions:
-  - `GET /get-all-suggestions`: Return all the suggestions data
-  - `GET /get-suggestions-by-category/:category`: Return suggestions filtered by category 
-  - `POST /add-one-suggestion`: Save submitted form data
-2. Test _all_ your API endpoints in Postman to make sure they're working according to your API Documentation
-3. Push your code to Github
-
-✅ By the end of this milestone:
-- All endpoints work in Postman according to your API Documentation
-- You can:
-  - Get all suggestions
-  - Filter by category
-  - Add a suggestion
-
----
-
-### 🎯 Milestone 6: Set Up the Frontend
-
-Now that your API is working, you'll build a frontend to display and interact with the data! 
-
-Refer to this [Setting Up Your Frontend guide](https://github.com/ac-backend/product-feedback-app/blob/main/set-up-frontend.md) to set up your React app from scratch in the `client` folder. 
-
-✅ By the end of this milestone:
-- Your app runs with `npm run dev` without errors
-- Your folder structure includes `components` and `pages`
-- You added a `_redirects` and `vite.config.js` file
-- You set up your routes with React Router
-
----
-
-### 🎯 Milestone 7: Build the Frontend
-
-1. Write your code to build the frontend, according to the [Figma designs](https://www.figma.com/design/vxjX8SdBOt21DCD14mrBM9/Product-Feedback-App-Design?node-id=0-1&t=OH1BSnaLrvNeWMlQ-1).
-  - 💡 Note: In your frontend code, all API calls should start with `/api`, for example: `/api/get-all-suggestions`
-  - 💡 Note: Use the icons and images included in the `assets` folder!    
-2. Push your code to Github
-
-✅ By the end of this milestone:
-- You can see suggestions displayed on the page
-- Filtering the suggestions works correctly
-- Submitting the form adds a new suggestion
-- The frontend is responsive to various screen sizes
-
----
-
-### 🎯 Milestone 8: Deploy to Netlify and Render
-
-1. Deploy your server/API code (in the `server` folder) to Render. Refer to this [Render deployment guide](https://github.com/ac-backend/countries-app-instructions/blob/main/version-4/deploy-server-to-render.md).
-2. Update the Base API URL at the top of your API documentation.
-3. Deploy your frontend code (in the `client` folder) to Netlify. Refer to this [Netlify deployment guide](https://docs.google.com/document/d/18jxCUA0bebCyYaIHy8aaKMgOQH4w5-b-iCGDWpV4K4M/edit?tab=t.jnwta4jrhylr#heading=h.scmsi7a6s9yz).
-
-✅ By the end of this milestone:
-- Your frontend is live on Netlify
-- Your backend is live on Render
-- Your API documentation's Base URL was updated with your deployed API's URL
-- Your live app can:
-  - Fetch and display suggestions from your deployed API
-  - Filter suggestions by category
-  - Submit new suggestions successfully
-
----
-
-### ⚙️ Test everything again... and again! 
-1. Now that your database, API, and frontend are all deployed to the internet, you can test all user flows:
-   - Viewing all suggestions
-   - Filtering the suggestions
-   - Adding a suggestion
-2. Check your database to make sure the data is updating correctly
-3. No errors appear in the browser console
-
----
-
-### ⚙️ Clean and Comment your code
-1. Clean up your code to make it clean and modular
-2. Remove unnecessary console.log() messages and unused blocks of commented-out code.
-3. Comment complex logic to explain how it works
-
----
-
-### 🎯 Milestone 9: Write README.md
-1. In your project's README.md file, explain what your project is about, its tech stack, how to run it, etc. This is important if you intend to showcase this project on your resume or portfolio. Use this [README.md template](https://github.com/ac-backend/countries-app-instructions/blob/main/version-4/write-your-README.md) to help you write it!
-2. Submit the Github link to your README.md file on Canvas. 
-
----
-
-### 🎯 Final Milestone: App complete!
-1. Push your code to Github
-2. Submit your Github repo link and Netlify link to Canvas! You're done! 🎉
-
----
-
-## 🌟 Stretch Goals (Optional)
-
-Finished the main requirements? Here are some bonus challenges:
-
-- 🏆 Upvote product suggestions
-- 🏆 Add a hamburger menu in mobile view
-- 🏆 Sort suggestions by most/least upvotes and most/least comments
-- 🏆 Edit an existing suggestion
-- 🏆 Delete an existing suggestion
-- 🏆 Add comments to an existing suggestion
-- 🏆 Implement multi-filtering
+**What I'm proud of:**
+Successfully connecting all three layers of the stack together and implementing features like category filtering, form error messages, and responsive design.
+
+**What challenged me:**
+Managing the file structure across client and server folders, and understanding how environment variables work when deploying to Render.
+
+**Future ideas:**
+🏆 Add upvoting on suggestions
+🏆 Add a hamburger menu in mobile view
+🏆 Sort suggestions by most/least upvotes and most/least comment
+🏆 Edit an existing suggestion
+🏆 Delete an existing suggestion
+🏆 Add comments to an existing suggestion
+🏆 Implement multi-filtering
+🏆 Add a light/dark mode toggle
