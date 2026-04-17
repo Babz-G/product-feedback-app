@@ -9,13 +9,29 @@ import iconSuggestions from "../assets/suggestions/icon-suggestions.svg";
 
 function Home() {
   const [suggestions, setSuggestions] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  // const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategories, setSelectedCategories] = useState(["All"]);
   const [sortBy, setSortBy] = useState("most-upvotes");
 
+  // const filteredSuggestions = (
+  //   selectedCategory === "All"
+  //     ? suggestions
+  //     : suggestions.filter((s) => s.category === selectedCategory)
+  // ).sort((a, b) => {
+  //   if (sortBy === "most-upvotes")
+  //     return (b.upvote_count || 0) - (a.upvote_count || 0);
+  //   if (sortBy === "least-upvotes")
+  //     return (a.upvote_count || 0) - (b.upvote_count || 0);
+  //   if (sortBy === "most-comments")
+  //     return (b.comment_count || 0) - (a.comment_count || 0);
+  //   if (sortBy === "least-comments")
+  //     return (a.comment_count || 0) - (b.comment_count || 0);
+  //   return 0;
+  // });
   const filteredSuggestions = (
-    selectedCategory === "All"
+    selectedCategories.includes("All")
       ? suggestions
-      : suggestions.filter((s) => s.category === selectedCategory)
+      : suggestions.filter((s) => selectedCategories.includes(s.category))
   ).sort((a, b) => {
     if (sortBy === "most-upvotes")
       return (b.upvote_count || 0) - (a.upvote_count || 0);
@@ -42,6 +58,21 @@ function Home() {
     setSuggestions(updated);
   }
 
+  // handles multi-category filtering
+  function handleCategoryClick(category) {
+    if (category === "All") {
+      setSelectedCategories(["All"]);
+    } else {
+      const withoutAll = selectedCategories.filter((c) => c !== "All");
+      if (withoutAll.includes(category)) {
+        const removed = withoutAll.filter((c) => c !== category);
+        setSelectedCategories(removed.length === 0 ? ["All"] : removed);
+      } else {
+        setSelectedCategories([...withoutAll, category]);
+      }
+    }
+  }
+
   return (
     <div className="home-container">
       <aside className="left-column">
@@ -50,7 +81,8 @@ function Home() {
           <p>Feedback Board</p>
         </div>
         <div className="category-filter">
-          <button
+          {/* old single-select buttons */}
+          {/* <button
             className={selectedCategory === "All" ? "active" : ""}
             onClick={() => setSelectedCategory("All")}
           >
@@ -83,6 +115,46 @@ function Home() {
           <button
             className={selectedCategory === "Feature" ? "active" : ""}
             onClick={() => setSelectedCategory("Feature")}
+          >
+            Feature
+          </button> */}
+
+          {/* new multi-select buttons */}
+          <button
+            className={selectedCategories.includes("All") ? "active" : ""}
+            onClick={() => handleCategoryClick("All")}
+          >
+            All
+          </button>
+          <button
+            className={selectedCategories.includes("UI") ? "active" : ""}
+            onClick={() => handleCategoryClick("UI")}
+          >
+            UI
+          </button>
+          <button
+            className={selectedCategories.includes("UX") ? "active" : ""}
+            onClick={() => handleCategoryClick("UX")}
+          >
+            UX
+          </button>
+          <button
+            className={
+              selectedCategories.includes("Enhancement") ? "active" : ""
+            }
+            onClick={() => handleCategoryClick("Enhancement")}
+          >
+            Enhancement
+          </button>
+          <button
+            className={selectedCategories.includes("Bug") ? "active" : ""}
+            onClick={() => handleCategoryClick("Bug")}
+          >
+            Bug
+          </button>
+          <button
+            className={selectedCategories.includes("Feature") ? "active" : ""}
+            onClick={() => handleCategoryClick("Feature")}
           >
             Feature
           </button>
