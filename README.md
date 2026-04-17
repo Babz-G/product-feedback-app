@@ -1,10 +1,10 @@
 # 📘 Product Feedback App
 
-Build better products, one suggestion at a time.
+_Build better products, one suggestion at a time._
 
 ## 📌 Project Description & Purpose
 
-A full-stack web application where users can view, filter, and submit suggestions to help improve a product. Users can browse all feedback, filter by category, and add their own suggestions through a form with built-in error messages.
+A full-stack web application where users can view, filter, and submit suggestions to help improve a product. Users can browse all feedback, filter by category, sort by upvotes or comments, upvote suggestions, and add their own suggestions through a form with built-in error messages.
 
 ## 🚀 Live Site
 
@@ -63,40 +63,37 @@ A full-stack web application where users can view, filter, and submit suggestion
 ### 🖥️ Desktop
 
 **Home Page**  
-<img width="1050" height="640" alt="Screenshot 2026-04-16 at 2 03 01 PM" src="https://github.com/user-attachments/assets/3eaa6a6d-9a2d-4ea8-b9e9-757fc84441ef" /> 
-
+<img width="1050" height="640" alt="Screenshot 2026-04-16 at 2 03 01 PM" src="https://github.com/user-attachments/assets/3eaa6a6d-9a2d-4ea8-b9e9-757fc84441ef" />
 
 **Add Feedback Page**  
-<img width="1050" height="663" alt="Screenshot 2026-04-16 at 2 03 12 PM" src="https://github.com/user-attachments/assets/ec753644-5b8d-472f-843c-8a1cad68d141" /> 
-
+<img width="1050" height="663" alt="Screenshot 2026-04-16 at 2 03 12 PM" src="https://github.com/user-attachments/assets/ec753644-5b8d-472f-843c-8a1cad68d141" />
 
 ### 📱 Mobile
 
 **Home Page**  
-<img width="503" height="691" alt="Screenshot 2026-04-16 at 2 04 10 PM" src="https://github.com/user-attachments/assets/0cb448a0-8e70-4bb4-92f4-01e24c736180" />
-
+<img width="503" height="691" alt="Screenshot 2026-04-16 at 2 04 10 PM" src="https://github.com/user-attachments/assets/0cb448a0-8e70-4bb4-92f4-01e24c736180" />
 
 **Add Feedback Page**  
-<img width="500" height="691" alt="Screenshot 2026-04-16 at 2 03 50 PM" src="https://github.com/user-attachments/assets/4785f951-e4d7-46f0-aeed-9aa418325630" />
-
+<img width="500" height="691" alt="Screenshot 2026-04-16 at 2 03 50 PM" src="https://github.com/user-attachments/assets/4785f951-e4d7-46f0-aeed-9aa418325630" />
 
 ## ✨ Features
 
 - 📋 Browse all product feedback suggestions
 - 🔍 Filter suggestions by category (UI, UX, Enhancement, Bug, Feature)
+- 🔼 Upvote suggestions
+- 🔃 Sort suggestions by most/least upvotes and most/least comments
 - ➕ Submit new feedback via a form
 - ⚠️ Error messages display if form fields are left empty
 - 📱 Responsive design for mobile and desktop
 
-
-
 ## 🔹 API Endpoints
 
-| Method | Endpoint                                 | Description                            |
-| ------ | ---------------------------------------- | -------------------------------------- |
-| `GET`  | `/get-all-suggestions`                   | Gets all suggestions from the database |
-| `GET`  | `/get-suggestions-by-category/:category` | Gets suggestions filtered by category  |
-| `POST` | `/add-one-suggestion`                    | Adds a new suggestion to the database  |
+| Method | Endpoint                                 | Description                                  |
+| ------ | ---------------------------------------- | -------------------------------------------- |
+| `GET`  | `/get-all-suggestions`                   | Gets all suggestions from the database       |
+| `GET`  | `/get-suggestions-by-category/:category` | Gets suggestions filtered by category        |
+| `POST` | `/add-one-suggestion`                    | Adds a new suggestion to the database        |
+| `POST` | `/upvote-suggestion/:id`                 | Increments the upvote count for a suggestion |
 
 🔗 Full API documentation: [View here](https://github.com/Babz-G/product-feedback-app/blob/main/api-documentation.md)
 
@@ -107,17 +104,18 @@ CREATE TABLE suggestions (
   id SERIAL PRIMARY KEY,
   title VARCHAR NOT NULL,
   category VARCHAR NOT NULL,
-  detail VARCHAR NOT NULL
+  detail VARCHAR NOT NULL,
+  upvote_count INTEGER DEFAULT 0
 );
 ```
 
 ## 💭 Future Ideas
 
-- 🏆 Add upvoting on suggestions
-- 🏆 Add a hamburger menu in mobile view
-- 🏆 Sort suggestions by most/least upvotes and most/least comments
-- 🏆 Edit an existing suggestion
-- 🏆 Delete an existing suggestion
-- 🏆 Add comments to an existing suggestion
-- 🏆 Implement multi-filtering
-- 🏆 Add a light/dark mode toggle
+- ☑ Add upvoting on suggestions
+- ☑ Sort suggestions by most/least upvotes and most/least comments
+- ☐ Add a hamburger menu in mobile view
+- ☐ Edit an existing suggestion
+- ☐ Delete an existing suggestion
+- ☐ Add comments to an existing suggestion
+- ☐ Implement multi-filtering
+- ☐ Add a light/dark mode toggle
