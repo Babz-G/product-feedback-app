@@ -40,6 +40,14 @@ async function addOneSuggestion(title, category, detail) {
     [title, category, detail]
   );
 }
+// stretch goal: upvote_count by 1 for a given suggestion id
+async function upvoteOneSuggestion(id) {
+  const result = await db.query(
+    "UPDATE suggestions SET upvote_count = upvote_count + 1 WHERE id = $1 RETURNING *",
+    [id]
+  );
+  return result.rows[0];
+}
 
 // ✨✨✨ API Endpoints ✨✨✨
 app.get("/get-all-suggestions", async (req, res) => {
@@ -55,4 +63,10 @@ app.post("/add-one-suggestion", async (req, res) => {
   const { title, category, detail } = req.body;
   await addOneSuggestion(title, category, detail);
   res.json("Success! Suggestion has been added.");
+});
+// stretch goal: upvote_count by 1 for a given suggestion id
+app.post("/upvote-suggestion/:id", async (req, res) => {
+  const id = req.params.id;
+  const suggestion = await upvoteOneSuggestion(id);
+  res.json(suggestion);
 });

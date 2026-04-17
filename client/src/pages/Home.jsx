@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import iconPlus from "../assets/icons/icon-plus.svg";
+import iconArrowUp from "../assets/icons/icon-arrow-up.svg";
+import iconArrowDown from "../assets/icons/icon-arrow-down.svg";
 import illustrationEmpty from "../assets/suggestions/illustration-empty.svg";
 import iconSuggestions from "../assets/suggestions/icon-suggestions.svg";
-import iconArrowDown from "../assets/icons/icon-arrow-down.svg";
 
 function Home() {
   const [suggestions, setSuggestions] = useState([]);
@@ -32,6 +33,14 @@ function Home() {
       .then((res) => res.json())
       .then((data) => setSuggestions(data));
   }, []);
+
+  async function handleUpvote(id) {
+    await fetch(`/api/upvote-suggestion/${id}`, { method: "POST" });
+    const updated = await fetch("/api/get-all-suggestions").then((res) =>
+      res.json()
+    );
+    setSuggestions(updated);
+  }
 
   return (
     <div className="home-container">
@@ -119,9 +128,18 @@ function Home() {
           ) : (
             filteredSuggestions.map((suggestion) => (
               <div key={suggestion.id} className="suggestion-card">
-                <h3>{suggestion.title}</h3>
-                <p>{suggestion.detail}</p>
-                <span className="category-name">{suggestion.category}</span>
+                <button
+                  className="upvote-btn"
+                  onClick={() => handleUpvote(suggestion.id)}
+                >
+                  <img src={iconArrowUp} alt="upvote" />
+                  {suggestion.upvote_count}
+                </button>
+                <div className="card-content">
+                  <h3>{suggestion.title}</h3>
+                  <p>{suggestion.detail}</p>
+                  <span className="category-name">{suggestion.category}</span>
+                </div>
               </div>
             ))
           )}
