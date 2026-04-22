@@ -63,7 +63,8 @@ A full-stack web application where users can view, filter, and submit suggestion
 ### 🖥️ Desktop
 
 **Home Page**  
-<img width="1050" height="640" alt="Screenshot 2026-04-16 at 2 03 01 PM" src="https://github.com/user-attachments/assets/3eaa6a6d-9a2d-4ea8-b9e9-757fc84441ef" />
+<img width="1105" height="682" alt="homepage-new" src="https://github.com/user-attachments/assets/cdb4c5b2-797d-4368-a437-d2ac441700e1" />  
+
 
 **Add Feedback Page**  
 <img width="1050" height="663" alt="Screenshot 2026-04-16 at 2 03 12 PM" src="https://github.com/user-attachments/assets/ec753644-5b8d-472f-843c-8a1cad68d141" />
@@ -71,10 +72,15 @@ A full-stack web application where users can view, filter, and submit suggestion
 ### 📱 Mobile
 
 **Home Page**  
-<img width="503" height="691" alt="Screenshot 2026-04-16 at 2 04 10 PM" src="https://github.com/user-attachments/assets/0cb448a0-8e70-4bb4-92f4-01e24c736180" />
+<img width="602" height="689" alt="mobile-new" src="https://github.com/user-attachments/assets/0df02c69-55b0-4e74-a656-1fa5dd31f1ec" />
+
 
 **Add Feedback Page**  
-<img width="500" height="691" alt="Screenshot 2026-04-16 at 2 03 50 PM" src="https://github.com/user-attachments/assets/4785f951-e4d7-46f0-aeed-9aa418325630" />
+<img width="602" height="795" alt="Screenshot 2026-04-22 at 1 41 06 PM" src="https://github.com/user-attachments/assets/c3c27ed8-819a-47a8-8f21-ef71bd60b188" />
+
+
+
+
 
 ## ✨ Features
 
