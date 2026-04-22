@@ -4,7 +4,7 @@ _Build better products, one suggestion at a time._
 
 ## 📌 Project Description & Purpose
 
-A full-stack web application where users can view, filter, and submit suggestions to help improve a product. Users can browse all feedback, filter by category, sort by upvotes or comments, upvote suggestions, and add their own suggestions through a form with built-in error messages.
+A full-stack web application where users can view, filter, and submit suggestions to help improve a product. Users can browse all feedback, filter by multiple categories, sort by upvotes or comments, upvote suggestions, and add their own suggestions through a form with built-in error messages.
 
 ## 🚀 Live Site
 
@@ -63,8 +63,7 @@ A full-stack web application where users can view, filter, and submit suggestion
 ### 🖥️ Desktop
 
 **Home Page**  
-<img width="1105" height="682" alt="homepage-new" src="https://github.com/user-attachments/assets/cdb4c5b2-797d-4368-a437-d2ac441700e1" />  
-
+<img width="1105" height="682" alt="homepage-new" src="https://github.com/user-attachments/assets/cdb4c5b2-797d-4368-a437-d2ac441700e1" />
 
 **Add Feedback Page**  
 <img width="1050" height="663" alt="Screenshot 2026-04-16 at 2 03 12 PM" src="https://github.com/user-attachments/assets/ec753644-5b8d-472f-843c-8a1cad68d141" />
@@ -74,18 +73,14 @@ A full-stack web application where users can view, filter, and submit suggestion
 **Home Page**  
 <img width="602" height="689" alt="mobile-new" src="https://github.com/user-attachments/assets/0df02c69-55b0-4e74-a656-1fa5dd31f1ec" />
 
-
 **Add Feedback Page**  
-<img width="602" height="795" alt="Screenshot 2026-04-22 at 1 41 06 PM" src="https://github.com/user-attachments/assets/c3c27ed8-819a-47a8-8f21-ef71bd60b188" />
-
-
-
-
+<img width="602" height="795" alt="Screenshot 2026-04-22 at 1 41 06 PM" src="https://github.com/user-attachments/assets/c3c27ed8-819a-47a8-8f21-ef71bd60b188" />
 
 ## ✨ Features
 
 - 📋 Browse all product feedback suggestions
 - 🔍 Filter suggestions by category (UI, UX, Enhancement, Bug, Feature)
+- 🔀 Filter by multiple categories simultaneously
 - 🔼 Upvote suggestions
 - 🔃 Sort suggestions by most/least upvotes and most/least comments
 - ➕ Submit new feedback via a form
@@ -119,9 +114,9 @@ CREATE TABLE suggestions (
 
 - ☑ Add upvoting on suggestions
 - ☑ Sort suggestions by most/least upvotes and most/least comments
+- ☑ Implement multi-filtering
 - ☐ Add a hamburger menu in mobile view
 - ☐ Edit an existing suggestion
 - ☐ Delete an existing suggestion
 - ☐ Add comments to an existing suggestion
-- ☐ Implement multi-filtering
 - ☐ Add a light/dark mode toggle
